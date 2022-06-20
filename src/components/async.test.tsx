@@ -11,5 +11,8 @@ describe("Async component",()=>{
         render(<Async/>);
         const listitemelements=await screen.findAllByRole('listitem');
         expect(listitemelements).not.toHaveLength(0);
+        //this works too 
+        //expect(listitemelements.length>=1);
+
     });
 })
