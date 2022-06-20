@@ -3,12 +3,13 @@ import './App.scss';
 import logo from './logo.svg';
 import { Container } from '@mui/system';
 import StickyFooter from './components/FooterComp';
-import DeleteIcon from '@mui/icons-material/Delete';
-import IconButton from '@mui/material/IconButton';
+import { Button,IconButton } from '@mui/material';
+//Icons
 import Done from '@mui/icons-material/Done';
 import Undo from '@mui/icons-material/Undo';
+import DeleteIcon from '@mui/icons-material/Delete';
 
-function add(a: number, b: number): number {
+export function Add(a: number, b: number): number {
   return a + b;
 }
 
@@ -54,11 +55,11 @@ function App(): element {
           Learn React
         </a>
         <p>
-          To <code>Do</code> List
+          To Do List <code>A102</code>
         </p>
         <form onSubmit={handleSubmit}>
           <input type="text" value={value} onChange={e => setValue(e.target.value)} required />
-          <button type="submit" >Add To the List {add(2, 1)}</button>
+          <Button type="submit" >Add To the List {Add(2, 1)}</Button>
         </form>
       </header>
       <Container>
