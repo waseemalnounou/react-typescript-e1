@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 
+interface Ipost{
+    id:number,
+    title:string
+}
+
 const Async = () => {
   const [posts, setPosts] = useState([]);
 
@@ -14,7 +19,7 @@ const Async = () => {
   return (
     <div>
       <ul>
-        {posts.map((post) => (
+        {posts.map((post:Ipost) => (
           <li key={post.id}>{post.title}</li>
         ))}
       </ul>

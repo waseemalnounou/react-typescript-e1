@@ -4,6 +4,9 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+if (!new class { x:any }().hasOwnProperty('x')) throw new Error('Transpiler is not configured correctly');
+
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
